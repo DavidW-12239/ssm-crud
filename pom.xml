@@ -20,12 +20,20 @@
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>5.3.20</version>
       <scope>test</scope>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -38,6 +46,13 @@
       <artifactId>spring-jdbc</artifactId>
       <version>5.3.20</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>5.3.0</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -58,9 +73,9 @@
     </dependency>
     <!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
     <dependency>
-      <groupId>c3p0</groupId>
+      <groupId>com.mchange</groupId>
       <artifactId>c3p0</artifactId>
-      <version>0.9.1.2</version>
+      <version>0.9.5.2</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
     <dependency>
@@ -74,13 +89,22 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jsp-api -->
     <dependency>
       <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
+      <artifactId>jsp-api</artifactId>
+      <version>2.0</version>
       <scope>provided</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>5.4.1.Final</version>
+    </dependency>
+
+
     <!-- https://mvnrepository.com/artifact/org.webjars/jquery -->
     <dependency>
       <groupId>org.webjars</groupId>
@@ -93,7 +117,17 @@
       <artifactId>mybatis-generator-core</artifactId>
       <version>1.4.1</version>
     </dependency>
-
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.13.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations-java5</artifactId>
+      <version>RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -146,13 +180,11 @@
             <version>1.4.1</version>
           </dependency>
           <!-- 数据库连接池 -->
-          <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
           <dependency>
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
             <version>0.9.5.2</version>
           </dependency>
-
           <!-- MySQL驱动 -->
           <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
           <dependency>

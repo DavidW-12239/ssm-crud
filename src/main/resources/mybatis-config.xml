@@ -8,12 +8,12 @@
     </settings>
 
     <typeAliases>
-        <package name="com.atguigu.crud.bean"/>
+        <package name="crud.bean"/>
     </typeAliases>
 
     <plugins>
         <plugin interceptor="com.github.pagehelper.PageInterceptor">
-            <!--分页参数合理化  -->
+            <!--paging reasonable  -->
             <property name="reasonable" value="true"/>
         </plugin>
     </plugins>

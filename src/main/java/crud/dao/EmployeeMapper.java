@@ -12,19 +12,23 @@ public interface EmployeeMapper {
 
     int deleteByPrimaryKey(Integer empId);
 
-    int insert(Employee row);
+    int insert(Employee record);
 
-    int insertSelective(Employee row);
+    int insertSelective(Employee record);
 
     List<Employee> selectByExample(EmployeeExample example);
 
     Employee selectByPrimaryKey(Integer empId);
 
-    int updateByExampleSelective(@Param("row") Employee row, @Param("example") EmployeeExample example);
+    List<Employee> selectByExampleWithDept(EmployeeExample example);
 
-    int updateByExample(@Param("row") Employee row, @Param("example") EmployeeExample example);
+    Employee selectByPrimaryKeyWithDept(Integer empId);
 
-    int updateByPrimaryKeySelective(Employee row);
+    int updateByExampleSelective(@Param("record") Employee record, @Param("example") EmployeeExample example);
 
-    int updateByPrimaryKey(Employee row);
+    int updateByExample(@Param("record") Employee record, @Param("example") EmployeeExample example);
+
+    int updateByPrimaryKeySelective(Employee record);
+
+    int updateByPrimaryKey(Employee record);
 }

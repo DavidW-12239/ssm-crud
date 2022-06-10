@@ -1,15 +1,41 @@
 package crud.bean;
 
+
+import javax.validation.constraints.Pattern;
+
 public class Employee {
     private Integer empId;
 
+    @Pattern(regexp="^[a-zA-Z0-9_-]{4,16}$", message = "illegal name!")
     private String empName;
 
     private String gender;
 
+    @Pattern(regexp="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$", message = "illegal email address!")
     private String email;
 
     private Integer dId;
+
+    public Employee() {
+    }
+
+    public Employee(Integer empId, String empName, String gender, String email, Integer dId) {
+        this.empId = empId;
+        this.empName = empName;
+        this.gender = gender;
+        this.email = email;
+        this.dId = dId;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    private Department department;
 
     public Integer getEmpId() {
         return empId;
